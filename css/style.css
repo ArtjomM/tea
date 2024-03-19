@@ -24,6 +24,26 @@ ul {
     padding-left: 0;
 }
 
+.wtf {
+    margin: 0;
+}
+
+.open {
+    background-color: black;
+}
+
+/* .review__item.review__item--hide {
+    display: none;
+} */
+
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 40px;
+    font-family: "Cormorant", serif;
+    font-weight: 400;
+}
+
 .mobile-nav,
 .menu__close {
     display: none;
@@ -155,9 +175,64 @@ body {
 }
 
 
+.assortment {
+    margin-bottom: 150px;
+}
+
+.assortment__list {
+    text-align: center;
+    display: flex;
+    gap: 0 40px;
+}
+
+.assortment__img {
+    max-width: 208px;
+    max-height: 208px;
+    width: 100%;
+}
+
+.assortment__name {
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Cormorant", serif;
+}
+
+.review {
+    padding: 60px 0;
+    background-color: #f7f2ea;
+}
+
+.review__list {
+    display: flex;
+    gap: 0 26px;
+    justify-content: center;
+}
+
+.review__item {
+    flex-basis: 280px;
+}
+
+.review__text {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.review__name {
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
 
 @media(max-width: 1000px) {
-
     .user-actions__item-search {
         margin-left: 30px;
     }
@@ -179,7 +254,20 @@ body {
     }
 
     .blockquote__text {
-        margin: 120px auto;
+        margin-top: 120px;
+        margin-bottom: 135px;
+    }
+
+    .assortment {
+        margin-bottom: 120px;
+    }
+
+    .assortment__list {
+        gap: 0;
+    }
+
+    .review__item:last-child {
+        display: none;
     }
 }
 
@@ -272,6 +360,20 @@ body {
     .blockquote__text {
         max-width: 640px;
     }
+
+    .assortment__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .review__item:last-child {
+        display: block;
+    }
+
+    .review__list {
+        flex-wrap: wrap;
+        gap: 30px 76px;
+    }
 }
 
 @media(max-width: 680px) {
@@ -314,9 +416,29 @@ body {
     .logo img {
         width: 40px;
     }
+
+    .assortment {
+        margin-bottom: 60px;
+    }
+
+    .review__list {
+        gap: 30px 20px;
+    }
+
+    .review {
+        padding: 50px 0;
+    }
+
+    .review__item {
+        flex-basis: 220px;
+    }
 }
 
 @media(max-width: 360px) {
+    .title {
+        margin-bottom: 30px;
+        font-style: 24px;
+    }
 
     .header__inner {
         padding: 10px 0;
@@ -355,5 +477,22 @@ body {
         max-width: 340px;
         margin-top: 70px;
         margin-bottom: 80px;
+    }
+
+    .assortment__img {
+        max-width: 170px;
+    }
+
+    .assortment {
+        margin-bottom: 80px;
+    }
+
+    .review__item:last-child,
+    .review__item:first-child {
+        display: none;
+    }
+
+    .review__item {
+        flex-basis: 100%;
     }
 }
